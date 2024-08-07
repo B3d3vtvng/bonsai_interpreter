@@ -1,11 +1,11 @@
 # Bonsai_interpreter
 A simple interpreter for a language consisting of a limited assembly instruction set called bonsai-assembly.
 The language consists of five instructions:
-	inc <variable>: Increments a given variable (more information on variables later.
-  dec <variable>: Decrements a variable.
-  jmp <line number>: Jumps to the given line number and executes the following code from there.
-  tst <variable>: Jumps to the next line if the given variable is not zero and to the line after the next line if it is.
-  hlt <no operands>: Stops program execution.
+inc <variable>: Increments a given variable (more information on variables later.
+dec <variable>: Decrements a variable.
+jmp <line number>: Jumps to the given line number and executes the following code from there.
+tst <variable>: Jumps to the next line if the given variable is not zero and to the line after the next line if it is.
+hlt <no operands>: Stops program execution.
 
 Variables are declared in a section under the code, in my version of the language started with the tag "section .data:".
 Variables can also only be given Integer names such as 1, 2, ...
