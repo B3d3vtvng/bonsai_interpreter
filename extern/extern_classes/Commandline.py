@@ -1,4 +1,4 @@
-from ..bonsai_execute import BonsaiExecuter
+from .bonsai_execute import BonsaiExecuter
 
 
 class Commandline():
