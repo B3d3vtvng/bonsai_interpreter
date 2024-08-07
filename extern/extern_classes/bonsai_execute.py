@@ -1,4 +1,5 @@
 from .ltoken import SimpleToken
+from ..extern_functions.is_int import is_int
 
 TOKENS = {"inc": "TT_inc", "dec": "TT_dec", "jmp": "TT_jmp", "tst" : "TT_tst", "hlt": "TT_hlt"}
 
