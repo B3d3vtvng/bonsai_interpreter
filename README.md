@@ -1,6 +1,6 @@
 # Bonsai_interpreter
 A simple interpreter for a language consisting of a limited assembly instruction set called bonsai-assembly.
-The language consists of five instructions:
+The language consists of five instructions:\n
 inc <variable>: Increments a given variable (more information on variables later.
 dec <variable>: Decrements a variable.
 jmp <line number>: Jumps to the given line number and executes the following code from there.
