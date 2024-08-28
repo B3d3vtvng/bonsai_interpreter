@@ -8,8 +8,11 @@ class BonsaiRun():
     self.error = None
     self.file_n = file_n.strip()
     self.bons_code, self.bons_vars = self.bget_data()
+    if self.bons_vars == "Error":
+      self.error = self.bons_code
+      return
     if self.bons_code == "Error":
-      self.error = "Error: Failed to load file content"
+      self.error = self.bons_vars
       return
     self.pre_state = self.bons_vars.copy()
     self.end_state = self.bons_vars.copy()
@@ -80,10 +83,11 @@ class BonsaiRun():
           continue
         if ':' not in line:
           self.error = "Error: Invalid variable format"
-          return ['Error', 'Error']
+          return ['Failed to Load File Content', 'Error']
         var_id = int(line[:line.index(':')])
         var_val = int(line[line.index(':')+1:].strip())
-
+        if var_id in bons_vars.keys():
+          return ["Error", "Error: Variable reassignment is not supported!"]
         bons_vars[var_id] = var_val
 
 
